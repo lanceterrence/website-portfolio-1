@@ -1,0 +1,224 @@
+#tab-options {
+    background-color: #F0F0F0;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+    .tab-options__container {
+        padding: 10px;
+
+
+        .tab-options__container__row {
+            display: flex;
+            flex-direction: column;
+
+
+            .tab-options__container__row__col-one,
+            .tab-options__container__row__col-two {
+                flex: 1;
+            }
+
+            .tab-options__container__row__col-one {
+                .options {
+                    .options__row-1 {
+                        max-width: 600px;
+                        margin-bottom: 30px;
+
+                        .col-one,
+                        .col-two {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .option-item {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 150px;
+                                height: 170px;
+                                border-radius: 10%;
+                                border-style: solid;
+                                border-width: 0.1px;
+                                border-color: rgb(201, 201, 201);
+                                margin: 5px;
+                                padding: 10px;
+                                box-shadow: 0px 30px 60px rgba(132, 161, 190, 0.16);
+                                cursor: pointer;
+                                transition: 0.4s ease;
+
+
+                                .option__icon {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    min-width: 50px;
+                                    min-height: 50px;
+                                    background-color: rgb(46, 50, 255);
+                                    border-radius: 50%;
+
+                                    i {
+                                        color: white;
+                                    }
+                                }
+
+                                .option__heading {
+                                    h4 {
+                                        margin-top: 5px;
+                                    }
+                                }
+
+                                .option__subtext {
+                                    p {
+                                        margin-top: 5px;
+                                        text-align: center;
+                                        font-size: 11px;
+                                    }
+                                }
+
+
+                            }
+
+                            .option-item:hover,
+                            .option-item__active {
+                                background-color: white;
+                                transform: scale(1.025);
+                                border: none;
+                            }
+                        }
+
+                        .col-two {
+                            display: flex;
+                        }
+                    }
+
+
+                }
+            }
+
+            .tab-options__container__row__col-two {
+                max-width: 600px;
+                margin-top: 15px;
+                margin-left: 15px;
+                margin-right: 15px;
+
+                .option-items {
+                    display: none;
+
+                    h1 {
+                        font-size: 20px;
+                    }
+
+                    p {
+                        margin-top: 5px;
+                        font-size: 13px;
+                        text-align: justify;
+                    }
+
+                    p.option-item__subtext1 {
+                        margin-top: 10px;
+                    }
+
+                    p.option-item__subtext2 {
+                        margin-top: 20px;
+                    }
+
+                    p.option-item__subtext2::after {
+                        content: 'Hello this is an identity crisis and I am just typing any words that came out of my mind.';
+                        display: block;
+                        margin-top: 20px;
+                        font-weight: 700;
+                    }
+                }
+
+                .option-items.active {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-only {}
+
+@include for-tablet-portrait-up {
+    #tab-options {
+        .tab-options__container {
+            .tab-options__container__row {
+                flex-direction: row;
+
+
+
+                .tab-options__container__row__col-two {
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+}
+
+@include for-tablet-landscape-up {
+    #tab-options {
+        .tab-options__container {
+            .tab-options__container__row {
+                flex-direction: row;
+
+                .tab-options__container__row__col-one {
+                    margin-left: -55px;
+                }
+
+                .tab-options__container__row__col-two {
+                    margin-left: -55px;
+                }
+            }
+        }
+    }
+}
+
+@include for-desktop-up {
+    #tab-options {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .tab-options__container {
+            .tab-options__container__row {
+                flex-direction: row;
+                transform: scale(1.2);
+
+                .tab-options__container__row__col-one {
+                    margin-left: -55px;
+                }
+
+                .tab-options__container__row__col-two {
+                    margin-left: -55px;
+
+                }
+            }
+        }
+    }
+}
+
+@include for-desktop-wide-up {
+    #tab-options {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .tab-options__container {
+            .tab-options__container__row {
+                flex-direction: row;
+                transform: scale(1.3);
+
+                .tab-options__container__row__col-one {
+                    margin-left: -55px;
+                }
+
+                .tab-options__container__row__col-two {
+                    margin-left: -55px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,218 @@
+#team-meet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    .team-meet__heading h2 {
+        font-weight: 300;
+        margin-top: 30px;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .team-meet__content {
+        padding-top: 15px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+
+        .row {
+            display: flex;
+            flex-direction: column;
+
+            .col {
+                padding: 20px;
+                margin: 5px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 30px 60px rgba(132, 161, 190, 0.36);
+
+                .tmImage {
+                    width: 190px;
+                    height: 110px;
+                    margin-bottom: 5px;
+                    background-image: url(/images/jpg/compressed/team-member-1.jpg);
+                    background-position: -50px -110px;
+                    background-repeat: no-repeat;
+                    background-size: 140%;
+                }
+
+                .tmImage.pic2 {
+                    background-image: url(/images/jpg/compressed/team-member-2.jpg);
+                    background-position: -50px -20px;
+                }
+
+                .tmImage.pic3 {
+                    background-image: url(/images/jpg/compressed/team-member-3.jpg);
+                    background-size: 170%;
+                    background-position: 0px -90px;
+                }
+
+                .tmImage.pic4 {
+                    background-image: url(/images/jpg/compressed/team-member-4.jpg);
+                    background-size: 210%;
+                    background-position: -90px -50px;
+                }
+
+                .tmName {
+                    margin-bottom: 5px;
+                    font-size: 18px;
+                    text-align: center;
+                }
+
+                .tmRole {
+                    margin-bottom: 5px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-align: center;
+                }
+
+                .tmLinks {
+                    text-align: center;
+
+                    a {
+                        i {
+                            color: blue;
+                            border-radius: 50%;
+                            width: 26px;
+                            height: 26px;
+                            padding: 5px;
+                            transition: 0.4s ease;
+                        }
+
+                        i:hover {
+                            background-color: blue;
+                            color: white;
+
+                            border-radius: 50%;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #team-stat {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+
+        .row {
+            display: flex;
+            justify-content: stretch;
+            flex-direction: column;
+            max-width: 1200px;
+
+
+            .col {
+                margin-left: 10px;
+                margin-right: 10px;
+
+                .title-icon i {
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: blue;
+                    font-size: 34px;
+                    width: 60px;
+                    height: 60px;
+                    padding: 8px;
+                    color: white;
+                    border-radius: 50%;
+
+                }
+
+                .title-heading {
+                    font-weight: 300;
+                    width: 300px;
+
+                    span {
+                        font-weight: 700;
+                    }
+                }
+
+                .sub-col {
+                    flex: 1;
+
+                    h2 {
+                        color: blue;
+                    }
+                }
+            }
+
+            .col.col-head {
+                flex: 2;
+            }
+
+            .col.col-body-1,
+            .col.col-body-2,
+            .col.col-body-3 {
+                flex: 1;
+            }
+        }
+    }
+}
+
+@include for-phone-only {}
+
+@include for-tablet-portrait-up {
+    #team-meet {
+        .team-meet__content {
+            flex-direction: column;
+
+            .row {
+                flex-direction: row;
+            }
+        }
+
+        #team-stat {
+            margin-left: 20px;
+            margin-right: 20px;
+
+            .row {
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+@include for-tablet-landscape-up {
+
+    #team-stat {
+        .row {
+            flex-direction: row;
+        }
+    }
+}
+
+@include for-desktop-up {
+    #team-meet {
+        .team-meet__content {
+            flex-direction: row;
+
+            .row {
+                flex-direction: row;
+
+                .col {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@include for-desktop-wide-up {}

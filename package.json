@@ -1,0 +1,15 @@
+{
+    "name": "website_practice_1",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "watch": "node-sass -o css scss/style.scss -w"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "node-sass": "^5.0.0"
+    }
+}
