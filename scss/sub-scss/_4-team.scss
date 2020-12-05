@@ -119,6 +119,11 @@
             .col {
                 margin-left: 10px;
                 margin-right: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
 
                 .title-icon i {
 
@@ -132,12 +137,14 @@
                     padding: 8px;
                     color: white;
                     border-radius: 50%;
-
+                    margin-bottom: 15px;
                 }
 
                 .title-heading {
                     font-weight: 300;
                     width: 300px;
+                    margin-bottom: 20px;
+                    text-align: center;
 
                     span {
                         font-weight: 700;
@@ -146,9 +153,16 @@
 
                 .sub-col {
                     flex: 1;
+                    margin-bottom: 25px;
+                    text-align: center;
 
                     h2 {
+                        font-size: 21px;
                         color: blue;
+                    }
+
+                    h5 {
+                        font-weight: 500;
                     }
                 }
             }
@@ -184,6 +198,20 @@
 
             .row {
                 flex-direction: row;
+
+                .col {
+                    align-items: flex-start;
+                    padding-left: 15px;
+
+                    .title-heading {
+
+                        text-align: left;
+                    }
+
+                    .sub-col {
+                        text-align: left;
+                    }
+                }
             }
         }
     }
@@ -194,6 +222,10 @@
     #team-stat {
         .row {
             flex-direction: row;
+
+            .col {
+                padding-left: 0px;
+            }
         }
     }
 }
@@ -210,6 +242,15 @@
                     margin-left: 10px;
                     margin-right: 10px;
                 }
+            }
+        }
+
+        #team-stat {
+            margin-top: 50px;
+
+            .row {
+                width: 1000px;
+                transform: translateX(35px) scale(1.030);
             }
         }
     }
