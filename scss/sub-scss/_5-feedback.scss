@@ -1,0 +1,16 @@
+#feedback {
+    padding: 10px;
+
+    .swiper-container {
+        height: 300px;
+        border: 2px solid black;
+
+        .swiper-wrapper {
+            border: 2px solid blue;
+
+            .swiper-slide {
+                border: 2px dotted red;
+            }
+        }
+    }
+}
