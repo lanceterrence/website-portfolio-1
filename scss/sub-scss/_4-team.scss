@@ -184,6 +184,8 @@
 
 @include for-tablet-portrait-up {
     #team-meet {
+        padding-top: 30px;
+
         .team-meet__content {
             flex-direction: column;
 
@@ -201,7 +203,7 @@
 
                 .col {
                     align-items: flex-start;
-                    padding-left: 15px;
+                    padding-left: 25px;
 
                     .title-heading {
 
@@ -220,6 +222,8 @@
 @include for-tablet-landscape-up {
 
     #team-stat {
+
+
         .row {
             flex-direction: row;
 

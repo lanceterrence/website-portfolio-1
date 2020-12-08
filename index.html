@@ -332,25 +332,67 @@
 
         <!-- Feedback Section -->
         <section id="feedback">
+            <h1>What <span>People</span> Say About Us</h1>
             <!-- Slider main container -->
             <div class="swiper-container">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    ...
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+                    <div class="swiper-slide">
+                        <div class="feedback-item">
+                            <div class="feedback-item__image first">
+                            </div>
+                            <div class="feedback-item__content">
+                                <h3>Irene Washington</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="links">
+                                    <i class="fab fa-facebook"></i>
+                                    <i class="fab fa-twitter-square"></i>
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                            </div>
 
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feedback-item">
+                            <div class="feedback-item__image second">
+                            </div>
+                            <div class="feedback-item__content">
+                                <h3>John Doe</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="links">
+                                    <i class="fab fa-facebook"></i>
+                                    <i class="fab fa-twitter-square"></i>
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feedback-item">
+                            <div class="feedback-item__image third">
+                            </div>
+                            <div class="feedback-item__content">
+                                <h3>Davis Beck</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="links">
+                                    <i class="fab fa-facebook"></i>
+                                    <i class="fab fa-twitter-square"></i>
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
             </div>
         </section>
     </div>
@@ -359,27 +401,36 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript">
-    var mySwiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
+    var slideCount = 1;
 
-        // If we need pagination
+    function myFunction(x) {
+
+        if (x.matches) { // If media query matches
+            return;
+        } else {
+            slideCount = 3;
+        }
+    }
+
+    var x = window.matchMedia("(max-width: 600px)")
+    myFunction(x); // Call listener function at run time
+    x.addListener(myFunction); // Attach listener function on state changes
+
+
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: slideCount,
+        spaceBetween: 0,
+        freeMode: true,
         pagination: {
             el: '.swiper-pagination',
+            clickable: true,
         },
-
         // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-    })
+    });
 </script>
 
 </html>
