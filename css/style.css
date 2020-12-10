@@ -541,14 +541,14 @@
         #team-meet .team-meet__content .row .col .tmLinks {
           text-align: center; }
           #team-meet .team-meet__content .row .col .tmLinks a i {
-            color: blue;
+            color: #2e32ff;
             border-radius: 50%;
             width: 26px;
             height: 26px;
             padding: 5px;
             transition: 0.4s ease; }
           #team-meet .team-meet__content .row .col .tmLinks a i:hover {
-            background-color: blue;
+            background-color: #2e32ff;
             color: white;
             border-radius: 50%; }
   #team-meet #team-stat {
@@ -571,7 +571,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: blue;
+          background-color: #2e32ff;
           font-size: 34px;
           width: 60px;
           height: 60px;
@@ -592,7 +592,7 @@
           text-align: center; }
           #team-meet #team-stat .row .col .sub-col h2 {
             font-size: 21px;
-            color: blue; }
+            color: #2e32ff; }
           #team-meet #team-stat .row .col .sub-col h5 {
             font-weight: 500; }
       #team-meet #team-stat .row .col.col-head {
@@ -654,6 +654,7 @@
     min-height: 300px; }
     #feedback .swiper-container .swiper-wrapper .swiper-slide .feedback-item {
       min-height: 300px;
+      padding-bottom: 50px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -690,6 +691,7 @@
           margin-bottom: 8px; }
           #feedback .swiper-container .swiper-wrapper .swiper-slide .feedback-item .feedback-item__content .links i {
             color: #2e32ff;
+            cursor: pointer;
             font-size: 20px;
             padding-left: 5px;
             padding-right: 5px; }
@@ -712,6 +714,86 @@
     transform: scale(1.3) translateX(50px); }
     #feedback .swiper-container .swiper-wrapper .swiper-slide .feedback-item {
       transform: scale(0.6); } }
+
+#blog {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px; }
+  #blog h1 {
+    text-align: center;
+    margin-bottom: 20px; }
+  #blog .blog-item {
+    padding-bottom: 20px; }
+    #blog .blog-item .blog-item__image.first {
+      width: 290px;
+      height: 210px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/jpg/compressed/blog-1.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 120%;
+      box-shadow: 0px 30px 60px rgba(132, 161, 190, 0.08);
+      border-radius: 8px;
+      margin-bottom: 11px; }
+    #blog .blog-item .blog-item__image.second {
+      width: 290px;
+      height: 210px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/jpg/compressed/blog-2.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 120%;
+      box-shadow: 0px 30px 60px rgba(132, 161, 190, 0.08);
+      border-radius: 8px;
+      margin-bottom: 11px; }
+    #blog .blog-item .blog-item__image.third {
+      width: 290px;
+      height: 210px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/jpg/compressed/blog-3.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 120%;
+      box-shadow: 0px 30px 60px rgba(132, 161, 190, 0.08);
+      border-radius: 8px;
+      margin-bottom: 11px; }
+    #blog .blog-item .blog-item__caption {
+      display: flex;
+      align-items: center;
+      margin-bottom: 11px; }
+      #blog .blog-item .blog-item__caption i {
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 8px;
+        color: blue; }
+      #blog .blog-item .blog-item__caption p {
+        font-size: 11px;
+        padding-right: 15px; }
+    #blog .blog-item .blog-item__content {
+      width: 290px; }
+  #blog .blog-more {
+    margin-top: 20px; }
+    #blog .blog-more a {
+      text-decoration: none;
+      background-color: #2e32ff;
+      color: white;
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px; }
+
+@media (min-width: 600px) {
+  #blog .blog-container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (min-width: 900px) {
+  #blog .blog-container {
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr); } }
 
 h1,
 h2,

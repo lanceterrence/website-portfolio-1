@@ -23,6 +23,7 @@
 
                 .feedback-item {
                     min-height: 300px;
+                    padding-bottom: 50px;
 
                     display: flex;
                     flex-direction: column;
@@ -77,7 +78,7 @@
 
                             i {
                                 color: rgb(46, 50, 255);
-                                ;
+                                cursor: pointer;
                                 font-size: 20px;
                                 padding-left: 5px;
                                 padding-right: 5px;
