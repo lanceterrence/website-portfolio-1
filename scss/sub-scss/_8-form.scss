@@ -1,0 +1,34 @@
+#form {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-container {
+        .row {
+            .col {
+                h1 {
+                    text-align: center;
+                }
+
+                .label-row-1 {
+                    display: flex;
+
+                    h6 {
+                        flex: 1;
+                    }
+                }
+
+
+
+                .input-row-2 {
+                    textarea {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}

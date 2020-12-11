@@ -835,6 +835,21 @@
     #logo .logo-container img {
       width: 80px; } }
 
+#form {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #form .form-container .row .col h1 {
+    text-align: center; }
+  #form .form-container .row .col .label-row-1 {
+    display: flex; }
+    #form .form-container .row .col .label-row-1 h6 {
+      flex: 1; }
+  #form .form-container .row .col .input-row-2 textarea {
+    width: 100%; }
+
 h1,
 h2,
 h3,
