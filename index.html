@@ -443,43 +443,23 @@
         </section>
 
         <!-- LOGOS SECTION -->
-        <section id="logo"></section>
+        <section id="logo">
+            <div class="logo-container">
+                <img src="/images/svg/logo-1.svg" alt="">
+                <img src="/images/svg/logo-2.svg" alt="">
+                <img src="/images/svg/logo-3.svg" alt="">
+                <img src="/images/svg/logo-4.svg" alt="">
+                <img src="/images/svg/logo-5.svg" alt="">
+                <img src="/images/svg/logo-6.svg" alt="">
+                <img src="/images/svg/logo-7.svg" alt="">
+                <img src="/images/svg/logo-8.svg" alt="">
+            </div>
+        </section>
     </div>
 </body>
-<script type="text/javascript" src="js/main.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script type="text/javascript">
-    var slideCount = 1;
-
-    function myFunction(x) {
-
-        if (x.matches) { // If media query matches
-            return;
-        } else {
-            slideCount = 3;
-        }
-    }
-
-    var x = window.matchMedia("(max-width: 600px)")
-    myFunction(x); // Call listener function at run time
-    x.addListener(myFunction); // Attach listener function on state changes
-
-
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: slideCount,
-        spaceBetween: 0,
-        freeMode: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-</script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript"></script>
 
 </html>
