@@ -842,7 +842,9 @@
   justify-content: center;
   align-items: center; }
   #form .form-container .row .col h1 {
-    text-align: center; }
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px; }
   #form .form-container .row .col .label-row-1 {
     display: flex; }
     #form .form-container .row .col .label-row-1 h6 {
