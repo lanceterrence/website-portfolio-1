@@ -1,36 +1,138 @@
-#form {
-    margin-top: 60px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    #form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 450px;
+        max-width: 1200px;
+        margin: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: 70px;
+        margin-bottom: 50px;
 
-    .form-container {
-        .row {
-            .col {
-                h1 {
-                    text-align: center;
-                    margin-top: 20px;
-                    margin-bottom: 20px;
-                }
+        h1 {
+            font-weight: 500;
+            margin-bottom: 20px;
 
-                .label-row-1 {
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+
+            .row {
+                //Column direction for tablet and up
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                max-width: 1200px !important;
+
+                .col.form {
                     display: flex;
+                    flex-direction: column;
+                    margin-bottom: 20px;
 
                     h6 {
-                        flex: 1;
+                        font-size: 14px;
+                        font-weight: 500;
+                        margin-bottom: 5px;
+                    }
+
+                    input {
+                        font-size: 100;
+                        width: 100%;
+                        line-height: 3;
+                        padding-left: 10px;
+                        outline: none;
+                        border: none;
+                        box-shadow: 0px 0px 19px rgba(132, 161, 190, 0.26);
+                        border-radius: 5px;
+                        margin-bottom: 15px;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        padding-left: 10px;
+                        padding-top: 10px;
+                        outline: none;
+                        border: none;
+                        box-shadow: 0px 0px 19px rgba(132, 161, 190, 0.26);
+                        border-radius: 5px;
+                        margin-bottom: 15px;
+                    }
+
+                    button {
+                        border: none;
+                        background-color: $mainColor;
+                        color: white;
+                        height: 40px;
+                        border-radius: 2px;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
                     }
                 }
 
-
-
-                .input-row-2 {
-                    textarea {
-                        width: 100%;
+                .col.map {
+                    iframe {
+                        width: 300px;
                     }
                 }
             }
         }
     }
 
-}
+
+    @include for-phone-only {}
+
+    @include for-tablet-portrait-up {
+        #form {
+
+            .container {
+
+                .row {
+                    display: flex;
+                    flex-direction: row;
+
+                    .col.form {
+                        .name-and-email-group {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+
+                            .name-line {
+                                width: 100%;
+                                padding-right: 5px;
+                            }
+
+                            .email-line {
+                                width: 100%;
+                                padding-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include for-tablet-landscape-up {
+        #form {
+            .container {
+                .row {
+                    .col.form {
+                        input {
+                            line-height: 4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include for-desktop-up {}
+
+    @include for-desktop-wide-up {}

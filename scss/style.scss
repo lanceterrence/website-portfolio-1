@@ -1,4 +1,5 @@
 @import "sub-scss/responsiveness";
+@import "sub-scss/variables";
 @import "sub-scss/1-home";
 @import "sub-scss/2-cards";
 @import "sub-scss/3-taboptions";
@@ -19,7 +20,10 @@ h6,
 p,
 a,
 span,
-label {
+label,
+input,
+textarea,
+button {
     font-family: 'Poppins', sans-serif;
 }
 
