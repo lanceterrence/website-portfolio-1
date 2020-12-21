@@ -73,12 +73,18 @@
                         border-radius: 2px;
                         text-transform: uppercase;
                         letter-spacing: 1px;
+                        margin-top: 5px;
                     }
                 }
 
                 .col.map {
+                    display: flex;
+                    justify-content: center;
+
                     iframe {
-                        width: 300px;
+                        max-width: 300px;
+                        height: 300px;
+                        margin: auto;
                     }
                 }
             }
@@ -96,8 +102,11 @@
                 .row {
                     display: flex;
                     flex-direction: row;
+                    justify-content: space-evenly;
 
                     .col.form {
+                        width: 50%;
+
                         .name-and-email-group {
                             width: 100%;
                             display: flex;
@@ -113,7 +122,13 @@
                                 padding-left: 5px;
                             }
                         }
+
+                        button {
+                            width: 140px;
+                        }
                     }
+
+                    .col.map {}
                 }
             }
         }
@@ -127,6 +142,7 @@
                         input {
                             line-height: 4;
                         }
+
                     }
                 }
             }
